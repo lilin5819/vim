@@ -1,0 +1,10 @@
+"color ir_black
+"color molokai
+"color peaksea
+let g:airline_theme = 'simple'
+"let g:airline_theme = 'tomorrow'
+
+hi Comment ctermfg=70
+set cursorcolumn
+"let g:spf13_bundle_groups=['general', 'programming', 'misc', 'scala', 'youcompleteme']
+let g:acp_enableAtStartup = 1
