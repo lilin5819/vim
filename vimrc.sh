@@ -12,3 +12,4 @@ cd ~
 #[ -d vimzsh ] && ln -s vimzsh/.vimrc* ~
 #[ $? -eq 0 ] && echo "ln -s .vimrc* successful!" || echo "error in ln .vimrc*"
 #[ -e vimzsh/agnosterzak.zsh-theme ] && ln -s vimzsh/agnosterzak.zsh-theme .oh-my-zsh/custom/
+echo "test ok"
