@@ -1,3 +1,6 @@
+Plugin 'iamcco/markdown-preview.vim'
+"Plugin 'suan/vim-instant-markdown'
+
 UnBundle 'Valloric/YouCompleteMe'
 Bundle 'WolfgangMehner/vim-plugins'
 "UnBundle 'scrooloose/syntastic'
