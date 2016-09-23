@@ -2,7 +2,7 @@
 
 inst_vimdeps()
 {
-    sudo apt-get install vim git wget curl \
+    sudo apt-get install vim git wget curl ctags cscope\
         vim-addon-manager vim-scripts vim-runtime vim-youcompleteme -y
     vam install youcompleteme
     [ $? != 0 ] && echo '下载vim依赖失败'
