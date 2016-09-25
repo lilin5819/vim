@@ -16,9 +16,6 @@ let g:UltiSnipsExpandTrigger = '<C-k>'
 let g:UltiSnipsJumpForwardTrigger = '<C-k>'
 let g:UltiSnipsJumpBackwardTrigger = '<C-j>'
 
-"let g:UltiSnipsExpandTrigger="<tab>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "let g:UltiSnipsEditSplit="vertical"
 set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 
@@ -56,12 +53,12 @@ let g:ycm_filetype_blacklist = {
 
 
 
-nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>jf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>jj :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "----------------------cscope---------------------
-if filereadable("cscope.out") 
-        cs add cscope.out 
+if filereadable("cscope.out")
+        cs add cscope.out
     endif
 
 "---------------------------C-head-------------------------------------
@@ -107,7 +104,7 @@ func SetComment()
   call append(line(".")+20, "#endif")
   call append(line(".")+21, "#endif //".toupper(expand("%:t:r"))."_H")
      elseif expand("%:e") == 'h'
-  "call append(line(".")+10, "#pragma once")
+  call append(line(".")+10, "#pragma once")
   call append(line(".")+11, "#ifndef _".toupper(expand("%:t:r"))."_H")
   call append(line(".")+12, "#define _".toupper(expand("%:t:r"))."_H")
   call append(line(".")+13, "")
@@ -115,9 +112,11 @@ func SetComment()
   call append(line(".")+15, "")
   call append(line(".")+16, "#endif /*----_".toupper(expand("%:t:r"))."_H-----*/")
      elseif &filetype == 'c'
-  call append(line(".")+11,"#include \"".expand("%:t:r").".h\"")
+  call append(line(".")+11,"#include \<stdio.h\>")
+  "call append(line(".")+12,"#include \"".expand("%:t:r").".h\"")
      elseif &filetype == 'cpp'
   call append(line(".")+11, "#include \"".expand("%:t:r").".h\"")
+  call append(line(".")+12,"#include \<iostream\>")
      endif
  endfunc})
 
