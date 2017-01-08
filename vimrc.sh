@@ -21,7 +21,8 @@ conf_vimlocal()
 {
     git clone https://github.com/powerline/fonts && [ -d fonts ] && sudo ./fonts/install.sh
     git clone https://github.com/lilin5819/vimzsh
-    sudo ln -sf vimzsh/ycm_extra_conf.py /usr/lib/vim-youcompleteme/ycm_extra_conf.py
+    #sudo ln -sf vimzsh/ycm_extra_conf.py /usr/lib/vim-youcompleteme/ycm_extra_conf.py
+    cd ~/.vim/bundle/YouCompleteMe && ./install.py
     [ -d vimzsh ] && ln -s vimzsh/.vimrc* ~/
     [ $? != 0 ] && echo "vim私有配置失败"
 }
