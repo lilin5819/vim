@@ -8,7 +8,7 @@ export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 
 #export SWT_GTK3=0 # for linux version eclipse android
 ######## android studio############
-SDK=/opt/Android/Sdk
+SDK=/opt/android_sdk
 ASDIR=/opt/android-studio
 ##################################
 

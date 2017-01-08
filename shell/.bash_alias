@@ -1,3 +1,6 @@
+alias du='du -sh'
+alias df='df -h'
+
 alias bakfile='rename 's/$/.bak/''
 
 alias rcvenv='[ -d venv ] && source venv/bin/activate '

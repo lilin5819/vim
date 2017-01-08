@@ -6,8 +6,8 @@
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="random"
-ZSH_THEME="agnoster"
+ZSH_THEME="random"
+#ZSH_THEME="agnoster"
 #ZSH_THEME="agnosterzak"
 
 
@@ -53,7 +53,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+#plugins=(git)
 
 # User configuration
 
@@ -86,6 +86,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+if [ -f ~/.bash_alias ]; then
+    . ~/.bash_alias
+fi
 
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
