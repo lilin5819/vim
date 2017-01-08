@@ -86,15 +86,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export QTDIR=/opt/Qt5.6.1/5.6/gcc_64
-export ASDIR=/opt/android-studio
-export AEDIR=/opt/eclipse/android-neon/eclipse
-export PATH="$PATH:$QTDIR/bin:$ASDIR/bin:$AEDIR"
-export MANPATH=$MANPATH:$QTDIR/doc/man
-export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH:/home/lilin/lib
 
-# added by Anaconda2 4.1.1 installer
-export PATH="$PATH:/opt/anaconda2/bin"
-# added by Anaconda3 4.1.1 installer
-export PATH="$PATH:/opt/anaconda3/bin"
+if [ -f ~/.bash_local ]; then
+    . ~/.bash_local
+fi
+
+if [ -f ~/.bash_logout ]; then
+    . ~/.bash_logout
+fi
