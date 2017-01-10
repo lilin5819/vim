@@ -27,8 +27,7 @@ QSYS_ROOTDIR=/opt/altera/15.0/quartus/sopc_builder/bin
 export MANPATH=$QTDIR/doc/man:$MANPATH
 
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
-export PATH=/home/lilin/arm/gcc/bin:$PATH
-export PATH=/opt/cmd_markdown_linux64:$QTDIR/5.7/gcc_64/bin:$QTDIR/Tools/QtCreator/bin:/opt/genymobile/genymotion:$AS/bin:$SDK/tools:$SDK/platform-tools:$ADT/eclipse:$PATH
+export PATH=$QTDIR/5.7/gcc_64/bin:$QTDIR/Tools/QtCreator/bin:/opt/genymobile/genymotion:$AS/bin:$SDK/tools:$SDK/platform-tools:$ADT/eclipse:$PATH
 export PATH=/opt/arm/arm-linux-gcc/bin:/opt/arm/arm-linux-gcc/arm-arm1176jzfssf-linux-gnueabi/bin:$PATH
 
 export PATH=$PATH:$QTDIR/bin:$ASDIR/bin
@@ -48,3 +47,8 @@ export PATH="/opt/anaconda2/bin:$PATH"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/lilin/.sdkman"
 [[ -s "/home/lilin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/lilin/.sdkman/bin/sdkman-init.sh"
+
+############### nvm ####################
+export NVM_DIR="/home/lilin/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#############################################

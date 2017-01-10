@@ -1,4 +1,5 @@
-"Plugin 'iamcco/markdown-preview.vim'
+Plugin 'iamcco/markdown-preview.vim'
+Plugin 'rdnetto/YCM-Generator'
 "Plugin 'suan/vim-instant-markdown'
 
 "UnBundle 'Valloric/YouCompleteMe'
