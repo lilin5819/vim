@@ -21,4 +21,7 @@ alias mkctag='sudo ctags -R'
 alias mkcstag='mkcscopefile && sudo cscope -Rbkq -i cscope.files'
 #alias mkcstag='sudo cscope -Rbkq -i'
 alias mktags='mkctag ; mkcstag'
-alias ycmgen='~/.vim/bundle/YCM-Generator/config_gen.py -f `pwd`'
+alias mkycmconf='python ~/.vim/bundle/YCM-Generator/config_gen.py -f --verbose `pwd`'
+
+alias oflash='sudo oflash 0 1 0 0 0'
+alias noflash='sudo oflash 0 1 1 0 0'

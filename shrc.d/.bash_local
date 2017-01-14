@@ -22,6 +22,8 @@ QTDIR=/opt/Qt5.7.0
 ALTERAOCLSDKROOT=/opt/altera/15.0/hld
 QSYS_ROOTDIR=/opt/altera/15.0/quartus/sopc_builder/bin
 ###################################
+BUILDROOT=/opt/src/buildroot-2016.11.1
+export PATH=$BUILDROOT/output/host/usr/bin:$PATH
 
 
 export MANPATH=$QTDIR/doc/man:$MANPATH
